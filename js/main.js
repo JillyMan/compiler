@@ -101,7 +101,6 @@ function next_token(characters, start) {
 
         tokenKind = new TokenKind(TOKEN_INT, value, end - start);
     }
-    //copy-past - fix
     else if(is_operator(currentChar))
     {
         let string_operator = func(characters, start, is_operator);
@@ -137,7 +136,7 @@ function lexer(characters) {
 }
 
 const code = "x = 10;\n" + 
-            "while true then\n" +
+            "while x < 20 then\n" +
                 "x++;\n" +
             "print(x);";
 
